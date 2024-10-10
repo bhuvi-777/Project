@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="refresh" content="10"> <!-- Refreshes every 10 seconds -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Overheating Protection System</title>
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Josefin+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  
+  <style>
+    body {
+      font-family: 'Josefin Sans', sans-serif; /* Use Josefin Sans for body text */
+      margin: 0;
+      padding: 0;
+      background-image: url('C:/Users/lenovo/Desktop/web/BG.jpg'); /* Replace with your image URL */
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Fix background image */
+      color: white;
+      text-align: center;
+    }
+    h1 {
+      font-family: 'Londrina Sketch', sans-serif; /* Use Londrina Sketch for main heading */
+      margin-top: 50px;
+      color: #ffd700; /* Heading color */
+      font-weight: 700; /* Bold */
+      font-size: 2.5em; /* Larger font size */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Add text shadow for better visibility */
+    }
+    h2 {
+      color: #ffd700; /* Updated color to match with the theme */
+      font-weight: 500; /* Medium weight */
+      margin-top: 30px;
+      font-size: 2em; /* Larger font size */
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8); /* Add text shadow for better visibility */
+    }
+    p {
+      font-size: 18px;
+      line-height: 1.6; /* Increased line height for better readability */
+    }
+    .container {
+      background-color: rgba(0, 0, 0, 0.7);
+      margin: 20px auto;
+      padding: 30px;
+      border-radius: 15px;
+      width: 90%; /* Adjusted width for better responsiveness */
+      max-width: 800px;
+    }
+    .section {
+      margin: 20px 0;
+    }
+    .images {
+      display: flex;
+      justify-content: center; /* Center align images */
+      gap: 20px; /* Space between images */
+      margin-top: 10px;
+      flex-wrap: wrap; /* Wrap images on smaller screens */
+    }
+    .images img {
+      width: 100%; /* Each image takes full width on smaller screens */
+      height: auto;
+      max-width: 300px; /* Maximum width for images */
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Add shadow for images */
+      transition: transform 0.3s ease; /* Smooth transition for hover effect */
+    }
+    .images img:hover {
+      transform: scale(1.1); /* Zoom in effect on hover */
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #f0f0f0; /* Better contrast */
+    }
+    .details {
+      display: flex;
+      justify-content: center; /* Center align the details */
+      flex-wrap: wrap; /* Wrap details on smaller screens */
+      margin-top: 20px;
+    }
+    .details div {
+      background-color: rgba(255, 255, 255, 0.2);
+      padding: 15px;
+      border-radius: 10px;
+      width: 80%; /* Adjusted width for better responsiveness */
+      margin: 10px; /* Added margin for spacing */
+      max-width: 350px; /* Max width for details */
+    }
+    .details h3 {
+      color: #ffd700; /* Updated color to match with the theme */
+      font-weight: 500; /* Medium weight */
+      margin-bottom: 10px; /* Space below heading */
+    }
+    .temperature {
+      font-size: 24px; /* Larger font size for temperature */
+      color: green; /* Default color */
+    }
+    .status {
+      font-size: 24px; /* Larger font size for status */
+      color: green; /* Default color */
+    }
+    a {
+      color: #ffcc00; /* Link color */
+      text-decoration: none; /* Remove underline */
+    }
+    a:hover {
+      text-decoration: underline; /* Underline on hover for links */
+    }
+
+    /* Media Queries for additional responsiveness */
+    @media (min-width: 768px) {
+      .images {
+        flex-direction: row; /* Arrange images side by side on larger screens */
+      }
+      .details {
+        flex-direction: row; /* Arrange details side by side on larger screens */
+        justify-content: space-around; /* Space around for details */
+      }
+      .details div {
+        width: 45%; /* Adjust width on larger screens */
+      }
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 2em; /* Smaller font size for small screens */
+      }
+      h2 {
+        font-size: 1.5em; /* Smaller font size for small screens */
+      }
+      p, .details p {
+        font-size: 16px; /* Smaller font size for small screens */
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Smart Overheating Protection System</h1>
+
+    <!-- Project Description -->
+    <p>This project monitors the temperature of household and industrial appliances like washing machines, refrigerators, and motors to prevent overheating. When the temperature exceeds a safe threshold, the system automatically disconnects the power supply to ensure safety and appliance longevity.</p>
+
+    <!-- Live Data Section -->
+    <div class="details">
+      <div>
+        <h3>Current Temperature</h3>
+        <p id="temperature" class="temperature">45°C</p> <!-- Replace with dynamic data -->
+      </div>
+      <div>
+        <h3>Appliance Status</h3>
+        <p id="status" class="status">ON</p> <!-- Replace with dynamic data -->
+      </div>
+    </div>
+
+    <!-- Project Images -->
+    <div class="section">
+      <h2>Project Images</h2>
+      <div class="images">
+        <img src="C:/Users/lenovo/Desktop/web/p2.jpg" alt="FLOW CHART" /> <!-- Replace with actual image URL -->
+        <img src="C:/Users/lenovo/Desktop/web/p1.jpg" alt="CIRCUIT" /> <!-- Replace with actual image URL -->
+      </div>
+    </div>
+
+    <!-- How It Works Section -->
+    <div class="section">
+      <h2>How It Works</h2>
+      <p>The Smart Overheating Protection System continuously monitors temperature using a DS18B20 sensor. The ESP32 microcontroller processes the temperature data and controls a relay that cuts power to the appliance if the temperature exceeds the set threshold. Users can also monitor and control the system remotely via a web interface.</p>
+    </div>
+
+    <!-- Developer Info Section -->
+    <div class="footer">
+      <p>Developed by Bhuvanesh Arun</p> <!-- Your name displayed here -->
+      <p>Contact: <a href="mailto:bhuvanesharun777@gmail.com">bhuvanesharun777@gmail.com</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Example script to change temperature and status colors based on threshold
+    const temperatureElement = document.getElementById('temperature');
+    const statusElement = document.getElementById('status');
+
+    function updateStatus(temperature) {
+      const threshold = 60; // Example threshold value
+
+      // Update temperature color
+      if (temperature > threshold) {
+        temperatureElement.style.color = 'red'; // Color when exceeding threshold
+        statusElement.style.color = 'red'; // Set status to red if temperature exceeds threshold
+        statusElement.textContent = 'OFF'; // Update status to OFF
+      } else {
+        temperatureElement.style.color = 'green'; // Color within safe range
+        statusElement.style.color = 'green'; // Set status to green if temperature is safe
+        statusElement.textContent = 'ON'; // Update status to ON
+      }
+
+      temperatureElement.textContent = `${temperature}°C`; // Update displayed temperature
+    }
+
+    // Example usage
+    updateStatus(45); // Call with an initial temperature value (replace with dynamic data)
+  </script>
+</body>
+</html>
